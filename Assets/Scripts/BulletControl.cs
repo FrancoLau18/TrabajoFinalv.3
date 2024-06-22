@@ -19,7 +19,8 @@ public class BulletControl : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        _compRigidbody2D.velocity = new Vector2(speed * xDirection,0);
+        /*_compRigidbody2D.velocity = new Vector2(speed * xDirection,0);*/
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
   /*  private void OnCollisionEnter2D(Collision2D collision)
