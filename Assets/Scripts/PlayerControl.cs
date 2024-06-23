@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerControl : MonoBehaviour 
 {
+<<<<<<< HEAD
     private float Vida = 100;
+=======
+>>>>>>> 3c451c0e41280240c61b41f3cd9f3bf86cc1818c
     public Transform Controlador_golpe;
     public float horizontal;
     public float vertical;
@@ -77,6 +80,7 @@ public class PlayerControl : MonoBehaviour
     {
         vista_horizontal = !vista_horizontal;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+<<<<<<< HEAD
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -85,6 +89,8 @@ public class PlayerControl : MonoBehaviour
             Vida = Vida - 10;
             print("Se pudo");
         }
+=======
+>>>>>>> 3c451c0e41280240c61b41f3cd9f3bf86cc1818c
     }
 }
 
