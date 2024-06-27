@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class PlayerControl : MonoBehaviour 
+public class PlayerControl : SeresVivos 
 {
-    private float Vida = 100;
+    
     public Transform Controlador_golpe;
     public float horizontal;
     public float vertical;
@@ -19,13 +19,12 @@ public class PlayerControl : MonoBehaviour
         _compRigidbody2D = GetComponent<Rigidbody2D>();
         _compAnimator = GetComponent<Animator>();
         _compSpriteRenderer = GetComponent<SpriteRenderer>();
+        Life = 100;
+        Attack = 10;
     }
     void Update()
     {
-        if (Vida<=0)
-        {
-            Destroy(this.gameObject);
-        }
+        Verificate_Life();
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw ("Vertical");
         _compAnimator.SetInteger("isWalking", (int)(horizontal + vertical));
@@ -82,7 +81,7 @@ public class PlayerControl : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Vida = Vida - 10;
+            Life = Life - 10;
             print("Se pudo");
         }
     }
