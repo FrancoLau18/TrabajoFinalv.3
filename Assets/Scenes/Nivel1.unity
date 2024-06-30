@@ -154,13 +154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d42f099af65574dad19580f81cadeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Life: 0
+  Attack: 0
+  Controlador_golpe: {fileID: 0}
   horizontal: 1
   vertical: 1
   speedX: 3
   speedY: 3
   bulletPrefab: {fileID: 3175672602388856459, guid: a2385b21481106c40b54113808bbb8a6, type: 3}
-  _compAudioSource: {fileID: 0}
-  BulletSpeed: 0
 --- !u!50 &682569377
 Rigidbody2D:
   serializedVersion: 4

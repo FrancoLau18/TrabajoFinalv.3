@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Tomato : Ingredientes
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.name == "Player")
+        {
+            Controlador_Ingredientes.instance.Aumento_tomato();
+            Destroy(this.gameObject);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-    
 }

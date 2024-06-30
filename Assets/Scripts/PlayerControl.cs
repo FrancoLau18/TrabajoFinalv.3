@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerControl : SeresVivos 
 {
-    
+    public bool golpeando;
     public Transform Controlador_golpe;
     public float horizontal;
     public float vertical;
-    public float speedX;
-    public float speedY;
+    public float Speed;
     private Rigidbody2D _compRigidbody2D;
     public GameObject bulletPrefab;
    // public AudioSource _compAudioSource;
@@ -24,10 +23,10 @@ public class PlayerControl : SeresVivos
     }
     void Update()
     {
+        Mover();
         Verificate_Life();
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw ("Vertical");
-        _compAnimator.SetInteger("isWalking", (int)(horizontal + vertical));
         Puching();
         /*Flip();*/          
     }
@@ -62,7 +61,7 @@ public class PlayerControl : SeresVivos
     }*/
     private void FixedUpdate()
     {
-        _compRigidbody2D.velocity = new Vector2(speedX * horizontal, speedY * vertical);
+        _compRigidbody2D.velocity = new Vector2(Speed * horizontal, Speed * vertical);
         if(horizontal<0 && !vista_horizontal)
         {
             Girar();
@@ -84,6 +83,25 @@ public class PlayerControl : SeresVivos
             Life = Life - 10;
             print("Se pudo");
         }
+    }
+    private void Mover()
+    {
+        if ((horizontal < 0 || horizontal > 0) && !golpeando)
+        {
+            _compAnimator.SetInteger("isWalking", (int)(horizontal + vertical));
+        }
+        else
+        {
+            _compAnimator.SetBool("Idle", true);
+        }
+        if (horizontal == 0 && !golpeando)
+        {
+            _compAnimator.SetBool("Idle", true);
+        }
+    }
+    private void Fin_Ani()
+    {
+        golpeando = false;
     }
 }
 
