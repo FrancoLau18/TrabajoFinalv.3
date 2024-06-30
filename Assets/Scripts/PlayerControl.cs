@@ -3,7 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerControl : SeresVivos 
 {
+<<<<<<< HEAD
     public bool golpeando;
+=======
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+    private float Vida = 100;
+=======
+>>>>>>> 3c451c0e41280240c61b41f3cd9f3bf86cc1818c
+>>>>>>> cc3b3966744e5ecd26bb32544ebc5818448637aa
+>>>>>>> f5f6dc178f3b0e409fd31963c298333a96a73da3
     public Transform Controlador_golpe;
     public float horizontal;
     public float vertical;
@@ -75,6 +86,7 @@ public class PlayerControl : SeresVivos
     {
         vista_horizontal = !vista_horizontal;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+<<<<<<< HEAD
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -83,6 +95,8 @@ public class PlayerControl : SeresVivos
             Life = Life - 10;
             print("Se pudo");
         }
+=======
+>>>>>>> 3c451c0e41280240c61b41f3cd9f3bf86cc1818c
     }
     private void Mover()
     {
