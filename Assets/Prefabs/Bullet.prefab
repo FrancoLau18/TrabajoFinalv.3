@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5846929424570280470}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 8389442730426716847}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: 0, z: 0, w: -0.00000004371139}
-  m_LocalPosition: {x: -0.98, y: -1.63, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.006, y: -3.346, z: 0}
+  m_LocalScale: {x: 1.1915, y: 1.2446, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -1058142219, guid: 889f4c052e2645348a69664ea0a5c046, type: 3}
+  m_Color: {r: 0.9948019, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -128,6 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   xDirection: 1
+  Blast: {fileID: 9114672919971974730, guid: 8c0f01f7f85fb1843bfd41c83a851024, type: 3}
+  animator: {fileID: 0}
 --- !u!58 &-5846929424570280470
 CircleCollider2D:
   m_ObjectHideFlags: 0

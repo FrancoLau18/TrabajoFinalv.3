@@ -6,10 +6,5 @@ public class SeresVivos : MonoBehaviour
 {
     public int Life;
     public float Attack;
-    protected void Verificate_Life(){
-        if (Life <= 0)
-        {
-            Destroy(this.gameObject);
-        }
-    }
+ 
 }

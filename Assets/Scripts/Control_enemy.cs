@@ -14,7 +14,7 @@ public class Control_enemy : SeresVivos
     }
     void Update()
     {
-        Verificate_Life();      
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

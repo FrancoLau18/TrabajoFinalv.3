@@ -14,4 +14,15 @@ public class Controle_Enemy : SeresVivos
     {
         _compRigidBody2D.velocity = new Vector2(0, -speedY);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag =="Player")
+        {
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == "Suelo" )
+        {
+            Destroy(this.gameObject, 2.0f);
+        }
+    }
 }

@@ -8,9 +8,11 @@ public class GameManagerControl : MonoBehaviour
     public Slider volumeSlider;
     public Text textLife;
     public int Life;
+    public PlayerControl player;
     private void Start()
     {
-        DecreaseLife(10);
+       
+        DecreaseLife(player.Life);
     }
     public void UpdateSoundVolume()
     {

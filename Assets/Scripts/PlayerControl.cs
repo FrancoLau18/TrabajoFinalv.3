@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class PlayerControl : SeresVivos 
 { 
     public Transform Controlador_golpe;
@@ -10,26 +12,22 @@ public class PlayerControl : SeresVivos
     public float speedY;
     private Rigidbody2D _compRigidbody2D;
     public GameObject bulletPrefab;
-   // public AudioSource _compAudioSource;
+    public AudioSource _compAudioSource;
     private Animator _compAnimator;
-    //private SpriteRenderer _compSpriteRenderer;
     private bool vista_horizontal;
     public GameManagerControl gameManager;
     private void Awake(){
         _compRigidbody2D = GetComponent<Rigidbody2D>();
         _compAnimator = GetComponent<Animator>();
-      //  _compSpriteRenderer = GetComponent<SpriteRenderer>();
-        Life = 10;
-        Attack = 1;
+        Life = 10 + Controlador_Ingredientes.instance.cura;
+        Attack = 1 + Controlador_Ingredientes.instance.ataque_extra;
     }
     void Update()
     {
         Verificate_Life();
         horizontal = Input.GetAxisRaw("Horizontal");
-       // vertical = Input.GetAxisRaw ("Vertical");
-        _compAnimator.SetInteger("isWalking", (int)(horizontal + vertical));
-        Puching();
-        /*Flip();*/          
+        _compAnimator.SetInteger("isWalking", (int)(horizontal ));
+        Puching();            
     }
     void Puching()
     {
@@ -39,27 +37,15 @@ public class PlayerControl : SeresVivos
             if (_compAnimator.GetBool("isPunching") )
             {
                 Instantiate(bulletPrefab, Controlador_golpe.position, Controlador_golpe.rotation);
+                _compAudioSource.Play();
             }
- 
-            // _compAudioSource.Play();
+          
         }
         else if (Input.GetButtonUp("Fire1") )
         {          
             _compAnimator.SetBool("isPunching", false);
         }
     }
-    /*void Flip()
-    {
-        if (horizontal < 0)
-        {
-            _compSpriteRenderer.flipX = true;
-            
-        }
-        else if (horizontal > 0)
-        {
-            _compSpriteRenderer.flipX = false;
-        }
-    }*/
     private void FixedUpdate()
     {
         _compRigidbody2D.velocity = new Vector2(speedX * horizontal, 0);
@@ -77,12 +63,29 @@ public class PlayerControl : SeresVivos
         vista_horizontal = !vista_horizontal;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Life = Life - 1;
+            gameManager.DecreaseLife(Life);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             Life = Life - 1;
             gameManager.DecreaseLife(Life);
+        }
+    }
+    protected void Verificate_Life()
+    {
+        if (Life <= 0)
+        {
+            Destroy(this.gameObject);
+            SceneManager.LoadScene("Perder");
         }
     }
 }
