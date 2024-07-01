@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel.unity
     guid: dceaa054ec3331e439306088b9b78fe0
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Perder.unity
     guid: 5018ac11d1a1a974eb880a9677887ae2
   - enabled: 1
@@ -29,4 +30,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossFinal.unity
     guid: da5aa9ec0ee27aa45b7cd9ae75f4e2dd
+=======
+    path: Assets/Scenes/Tutorial.unity
+    guid: 4d5699c6357efd243825601ba6e709bf
+>>>>>>> 3dc0c6e683fd944d8f0072ab2a6ba443434baf4d
   m_configObjects: {}

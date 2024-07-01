@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/BossFinal.unity.meta
 guid: da5aa9ec0ee27aa45b7cd9ae75f4e2dd
+=======
+guid: 4d5699c6357efd243825601ba6e709bf
+>>>>>>> 3dc0c6e683fd944d8f0072ab2a6ba443434baf4d:Assets/Scenes/Tutorial.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

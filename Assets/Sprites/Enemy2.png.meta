@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/Enemy2.png.meta
 guid: a3d8da609a56fd54cac07dfa259e342c
+=======
+<<<<<<< HEAD
+guid: ecb033e75acc9ed4f9b50efec5ffd4ef
+=======
+guid: 17d35fa3469efc448ae4f2db407ae55e
+>>>>>>> f5f6dc178f3b0e409fd31963c298333a96a73da3
+>>>>>>> 3dc0c6e683fd944d8f0072ab2a6ba443434baf4d:Assets/Sprites/ControlTeclado2.jpeg.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,6 +102,35 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<< HEAD
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+=======
+>>>>>>> f5f6dc178f3b0e409fd31963c298333a96a73da3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
