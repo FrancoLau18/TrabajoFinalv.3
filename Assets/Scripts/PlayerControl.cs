@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class PlayerControl : SeresVivos 
-{
-    
+{ 
     public Transform Controlador_golpe;
     public float horizontal;
     public float vertical;
@@ -13,20 +12,21 @@ public class PlayerControl : SeresVivos
     public GameObject bulletPrefab;
    // public AudioSource _compAudioSource;
     private Animator _compAnimator;
-    private SpriteRenderer _compSpriteRenderer;
+    //private SpriteRenderer _compSpriteRenderer;
     private bool vista_horizontal;
+    public GameManagerControl gameManager;
     private void Awake(){
         _compRigidbody2D = GetComponent<Rigidbody2D>();
         _compAnimator = GetComponent<Animator>();
-        _compSpriteRenderer = GetComponent<SpriteRenderer>();
-        Life = 100;
-        Attack = 10;
+      //  _compSpriteRenderer = GetComponent<SpriteRenderer>();
+        Life = 10;
+        Attack = 1;
     }
     void Update()
     {
         Verificate_Life();
         horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw ("Vertical");
+       // vertical = Input.GetAxisRaw ("Vertical");
         _compAnimator.SetInteger("isWalking", (int)(horizontal + vertical));
         Puching();
         /*Flip();*/          
@@ -62,7 +62,7 @@ public class PlayerControl : SeresVivos
     }*/
     private void FixedUpdate()
     {
-        _compRigidbody2D.velocity = new Vector2(speedX * horizontal, speedY * vertical);
+        _compRigidbody2D.velocity = new Vector2(speedX * horizontal, 0);
         if(horizontal<0 && !vista_horizontal)
         {
             Girar();
@@ -81,8 +81,8 @@ public class PlayerControl : SeresVivos
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Life = Life - 10;
-            print("Se pudo");
+            Life = Life - 1;
+            gameManager.DecreaseLife(Life);
         }
     }
 }

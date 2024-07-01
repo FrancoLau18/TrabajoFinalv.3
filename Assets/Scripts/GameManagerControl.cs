@@ -6,18 +6,19 @@ public class GameManagerControl : MonoBehaviour
 {
     public AudioSource audioSource;
     public Slider volumeSlider;
-    void Start()
+    public Text textLife;
+    public int Life;
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        DecreaseLife(10);
     }
     public void UpdateSoundVolume()
     {
         audioSource.volume = volumeSlider.value;
+    }
+    public void DecreaseLife(int Life)
+    {
+        this.Life = Life;
+        textLife.text  = ":" + this.Life;
     }
 }

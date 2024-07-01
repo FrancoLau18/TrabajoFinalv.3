@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class SeresVivos : MonoBehaviour
 {
-    public float Life;
+    public int Life;
     public float Attack;
-    protected void Verificate_Life()
-    {
+    protected void Verificate_Life(){
         if (Life <= 0)
         {
             Destroy(this.gameObject);
