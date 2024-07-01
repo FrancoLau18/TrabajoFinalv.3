@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &1722298616895165403
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +32,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7342644654064467878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 3c451c0e41280240c61b41f3cd9f3bf86cc1818c
 --- !u!1 &3429386176232455812
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +49,11 @@ GameObject:
   - component: {fileID: -6261410930433263023}
   m_Layer: 0
   m_Name: Caja
+<<<<<<< HEAD
   m_TagString: Box
+=======
+  m_TagString: Untagged
+>>>>>>> 3c451c0e41280240c61b41f3cd9f3bf86cc1818c
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,12 +67,23 @@ Transform:
   m_GameObject: {fileID: 3429386176232455812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 3.29, y: 2.16, z: 2}
+=======
+<<<<<<< HEAD
+  m_LocalPosition: {x: 3.29, y: 2.16, z: 0}
+>>>>>>> 0d61ace403eb39f4413fffdef0de15328560daef
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7075536579962153919}
   - {fileID: 3264932652092565559}
+=======
+  m_LocalPosition: {x: 3.35, y: -0.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+>>>>>>> 3c451c0e41280240c61b41f3cd9f3bf86cc1818c
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9218764350903282802
@@ -177,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0428e98e16ee8084e99693cfa568d4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   fruit1: {fileID: 7075536579962153919}
   fruit2: {fileID: 3264932652092565559}
   fruta1: {fileID: 3885447112541422557, guid: 3153a3b284e1f214095422ce48665b72, type: 3}
@@ -239,3 +258,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7342644654064467878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  fruta1: {fileID: 3885447112541422557, guid: 3153a3b284e1f214095422ce48665b72, type: 3}
+  fruta2: {fileID: 4590971630244789229, guid: 3a87261c5401f8246a4093d9eb24533c, type: 3}
+>>>>>>> 3c451c0e41280240c61b41f3cd9f3bf86cc1818c

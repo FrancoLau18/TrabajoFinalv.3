@@ -231,7 +231,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
+<<<<<<< HEAD
+  m_audioClip: {fileID: 8300000, guid: 3095cab0a1d8c3d419bc68debd0dc5e9, type: 3}
+=======
   m_audioClip: {fileID: 8300000, guid: 96e62516a1c7ebd4f9984ab5e0eb7707, type: 3}
+>>>>>>> f5f6dc178f3b0e409fd31963c298333a96a73da3
   m_PlayOnAwake: 1
   m_Volume: 0.107
   m_Pitch: 1
@@ -798,7 +802,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1777606953}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 2cf5b1d6ec41ffc4d8775228e316bc43, type: 3}
+=======
   m_Script: {fileID: 11500000, guid: ecd8a7e31478ce94a8dbf2678aceb72c, type: 3}
+>>>>>>> f5f6dc178f3b0e409fd31963c298333a96a73da3
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 260384026}
@@ -875,7 +883,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+  m_Sprite: {fileID: 21300000, guid: e4355fecbce4e5b4a936db4a91289366, type: 3}
+=======
   m_Sprite: {fileID: 21300000, guid: ddc2eeda18d70c54b9564fe23952ebf2, type: 3}
+>>>>>>> f5f6dc178f3b0e409fd31963c298333a96a73da3
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
